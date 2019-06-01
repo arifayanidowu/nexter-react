@@ -1,0 +1,96 @@
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+}
+
+@for $i from 1 through 4 {
+  @if $i == 1 {
+    .heading-#{$i} {
+      font-size: 4.5rem;
+      color: $color-grey-light-1;
+      line-height: 1;
+    }
+  }
+
+  @if $i == 2 {
+    .heading-#{$i} {
+      font-size: 4rem;
+      font-style: italic;
+      line-height: 1;
+      &--light {
+        color: $color-grey-light-1;
+      }
+      &--dark {
+        color: $color-grey-dark-1;
+      }
+    }
+  }
+
+  @if $i == 3 {
+    .heading-#{$i} {
+      font-size: 1.6rem;
+      color: $color-primary;
+      text-transform: uppercase;
+    }
+  }
+
+  @if $i == 4 {
+    .heading-#{$i} {
+      font-size: 1.9rem;
+      &--light {
+        color: $color-grey-light-1;
+      }
+      &--dark {
+        color: $color-grey-dark-1;
+      }
+    }
+  }
+  .heading-#{$i} {
+    @extend %heading;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  color: $color-primary;
+  border: none;
+  border-radius: 50px;
+  border: 3px solid $color-primary;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.6rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #fff;
+    background-color: $color-primary-dark;
+    border-color: $color-primary-dark;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.cta {
+  background-color: $color-primary;
+  color: #fff;
+  border: none;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.6rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+@for $i from 1 through 8 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+}
