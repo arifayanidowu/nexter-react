@@ -6,7 +6,7 @@ export default function StoryPictures() {
   return (
     <div className="story__pictures">
       <img src={story1} alt="Couple with new house" className="story__img--1" />
-      <img src={story2} alt="New house" class="story__img--2" />
+      <img src={story2} alt="New house" className="story__img--2" />
     </div>
   );
 }
